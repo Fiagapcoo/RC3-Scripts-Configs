@@ -421,8 +421,9 @@ EOF
 }
 
 apk add --no-cache nginx
-Configurar_App || { echo "app setup failed"; exit 1; }
-Configurar_Web || { echo "WebServer setup failed"; exit 1; }
+check_user_input || { echo "Input validation failed"; exit 1; }
+App_Setup || { echo "app setup failed"; exit 1; }
+WebServer_Config || { echo "WebServer setup failed"; exit 1; }
 
 sed -i '/http {/a \
     server { \
