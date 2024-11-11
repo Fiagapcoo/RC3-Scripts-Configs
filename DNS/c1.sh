@@ -428,7 +428,7 @@ WebServer_Config || { echo "WebServer setup failed"; exit 1; }
 sed -i '/http {/a \
     server { \
         listen 80; \
-        server_name webserver.rc3-'${T}${G}'.test; \
+        server_name webserver.rc3'${T}${G}'.test; \
         root /var/www/webserver.rc3-'${T}${G}'.test; \
         index index.html; \
         location / { \
@@ -437,7 +437,7 @@ sed -i '/http {/a \
     } \
     server { \
         listen 80; \
-        server_name app.rc3-'${T}${G}'.test; \
+        server_name app.rc3'${T}${G}'.test; \
         root /var/www/app.rc3-'${T}${G}'.test; \
         index index.html; \
         location / { \
