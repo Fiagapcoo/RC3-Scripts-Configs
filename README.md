@@ -25,7 +25,9 @@ This repository contains network protocol scripts and configurations developed a
 ### DHCP
 The `DHCP` directory contains configurations related to the Dynamic Host Configuration Protocol.
 
-*Scripts pending implementation*
+#### Available Scripts:
+1. `r1.sh`: Run it in R1 alpine machine
+2. `r0.sh`: Run it in R0 alpine machine
 
 ### DNS
 The `DNS` directory contains scripts for DNS (Domain Name System) configuration and management.
@@ -34,24 +36,19 @@ The `DNS` directory contains scripts for DNS (Domain Name System) configuration 
 1. `c1.sh`: Run it in C1 alpine machine
 2. `r0.sh`: Run it in R0 alpine machine
 
-#### How to Execute
+### How to Execute any script
 1. Clone the repository:
    ```bash
    git clone https://github.com/Fiagapcoo/RC3-Scripts-Configs.git
    ```
 
-2. Navigate to the script directory:
+2. Navigate to the directory:
    ```bash
    cd RC3-Scripts-Configs/DNS/
    ```
 
-3. Grant execution permissions:
-   ```bash
-   chmod +x r0.sh
-   chmod +x c1.sh
-   ```
 
-4. Execute desired script:
+3. Execute desired script:
    ```bash
    ./r0.sh   # For server configuration
    # or
