@@ -1,0 +1,21 @@
+Alias /phpmyadmin /usr/share/phpmyadmin
+
+<Directory /usr/share/phpmyadmin>
+    Options SymLinksIfOwnerMatch
+    DirectoryIndex index.php
+
+    <IfModule mod_php.c>
+        php_admin_value upload_max_filesize 2M
+        php_admin_value post_max_size 8M
+        php_admin_value max_execution_time 300
+        php_admin_value max_input_time 300
+    </IfModule>
+
+    Require all granted
+</Directory>
+
+<Directory /usr/share/phpmyadmin/setup>
+    <IfModule mod_authz_core.c>
+        Require local
+    </IfModule>
+</Directory>
